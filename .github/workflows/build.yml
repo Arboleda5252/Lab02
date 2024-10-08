@@ -42,7 +42,7 @@ jobs:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-jobs:
+  jobs:
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
