@@ -25,3 +25,6 @@ $ mvnw clean install
 Execute:
 ```shell
 $ mvwn -B package -DskipTests --file pom.xml
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Arboleda5252_Lab02&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Arboleda5252_Lab02)
+
