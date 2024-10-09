@@ -67,7 +67,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       #Analyze project with SonarCloud
-      - name: Analyze with SonarCloud
+      - name: Build and analyze
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Arboleda5252_Lab02
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
