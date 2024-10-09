@@ -107,4 +107,18 @@ jobs:
           name: artifact
           #From this path
           path: target/lab2-0.0.1-SNAPSHOT.jar
+        
+  #vercel 
+  version: '3'
+  services:
+    app: 
+      volumes: 
+        - ./target/myapp.jar:/app/myapp.jar
+      image: openjdk:11-jdk
+      ports: 
+        - "8080:8080"
+      environments:
+        - JAVA_OPTS= -Xmx512m
+      command: ["java", "-jar", "/app/myapp.jar"]
+
       
