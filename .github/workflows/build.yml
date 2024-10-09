@@ -7,7 +7,7 @@ on:
   #Trigger the workflow on push from the main branch
   push:
     branches:
-      - mi-rama
+      - main
 jobs:
   #Test's job
   tests:
@@ -35,11 +35,12 @@ jobs:
       - name: Run Tests
         run: mvn -B test
 
+  #Workflow name
   name: SonarCloud
   on:
-  push:
-    branches:
-      - main
+    push:
+      branches:
+        - main
   pull_request:
     types: [opened, synchronize, reopened]
   jobs:
